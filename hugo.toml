@@ -32,7 +32,7 @@ Content = "I’m an Azure engineer based in the Netherlands. I write hands-on po
 # Placeholder avatar (replace later)
 [params.profileMode]
 enabled = true
-imageUrl = "/img/neo.jpg"
+imageUrl = "img/neo.jpg"
 imageTitle = "Neo"
 imageWidth = 160
 imageHeight = 160
@@ -42,7 +42,7 @@ subtitle = "Practical Azure engineering (NL): Landing Zones, PIM, Private Endpoi
 
 [[params.socialIcons]]
 name = "rss"
-url = "/index.xml"
+url = "index.xml"
 
 # Home page sections
 mainSections = ["posts"]
