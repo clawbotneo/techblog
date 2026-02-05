@@ -23,9 +23,9 @@ You can be “least privilege” on paper and still end up with too many **perma
 
 ## Architecture (mental model)
 
-1) An **Entra group** represents a privilege bundle (e.g. `AZ-Prod-Platform-Owners`).
-2) That group is assigned to an **Azure role** at the right scope (subscription / MG / RG). *(Azure RBAC assignment can be managed elsewhere; this post stays azuread-only.)*
-3) Users become **eligible** for membership via PIM for Groups.
+1) A **role-assignable Entra security group** represents a privilege bundle (e.g. `ENTRA-Intune-Administrators`).
+2) That group is assigned one or more **Entra ID directory roles** (for example **Intune Administrator**).
+3) Users become **eligible** for group membership via **PIM for Groups**.
 4) When needed, a user activates membership for a limited time.
 5) An **approver group** approves the activation.
 
@@ -33,10 +33,10 @@ You can be “least privilege” on paper and still end up with too many **perma
 
 Keep names boring and searchable:
 
-- Privileged RBAC group: `AZ-<env>-<domain>-<role>`
-  - example: `AZ-Prod-Platform-Owners`
-- Approver group: `AZ-<env>-<domain>-<role>-Approvers`
-  - example: `AZ-Prod-Platform-Owners-Approvers`
+- Privileged group: `ENTRA-<Workload>-<Role>`
+  - example: `ENTRA-Intune-Administrators`
+- Approver group: `ENTRA-<Workload>-<Role>-Approvers`
+  - example: `ENTRA-Intune-Administrators-Approvers`
 
 A simple rule: **every privileged group must have an approver group**, and it must not be empty.
 
@@ -69,21 +69,27 @@ provider "azuread" {
 }
 ```
 
-### 2) Create the privileged group + approver group
+### 2) Create a *role-assignable* privileged group + approver group
+
+For Entra directory roles, you typically want a **role-assignable group**.
 
 ```hcl
 resource "azuread_group" "privileged" {
-  display_name     = "AZ-Prod-Platform-Owners"
+  display_name     = "ENTRA-Intune-Administrators"
   security_enabled = true
   mail_enabled     = false
-  description      = "Privileged group. Membership is controlled via PIM (eligible by default)."
+
+  # critical for Entra ID directory role assignments
+  assignable_to_role = true
+
+  description = "Privileged group. Membership is controlled via PIM for Groups (eligible by default)."
 }
 
 resource "azuread_group" "approvers" {
-  display_name     = "AZ-Prod-Platform-Owners-Approvers"
+  display_name     = "ENTRA-Intune-Administrators-Approvers"
   security_enabled = true
   mail_enabled     = false
-  description      = "Approvers for PIM activations for AZ-Prod-Platform-Owners."
+  description      = "Approvers for PIM activations for ENTRA-Intune-Administrators."
 }
 ```
 
@@ -147,8 +153,8 @@ Here’s the workflow that keeps this from turning into “PIM theatre”:
 
 ## Guardrails I strongly recommend
 
-- **Ban direct user RBAC assignments** (detect and clean up; don’t rely on good intentions).
-- Keep activation windows short: **1–4 hours** is usually enough.
+- **Ban direct user directory role assignments** (detect and clean up; don’t rely on good intentions).
+- Keep activation windows reasonable: **8 hours** can be OK for day work, but don’t let it become “always on”.
 - Require justification. “Need access” is not justification.
 - Decide break-glass explicitly: separate accounts, separate groups, monitored.
 
@@ -156,7 +162,8 @@ Here’s the workflow that keeps this from turning into “PIM theatre”:
 
 - **Approver group ownership** is unclear → approvals stall.
 - Too many eligible users → “eligible” becomes the new “permanent”.
-- People bypass with ad-hoc role assignments → drift returns.
+- People bypass with direct role assignments “just for now” → drift returns.
+- Forgetting `assignable_to_role = true` → you can’t assign directory roles to the group.
 
 ## Next: I can tailor this to your setup
 

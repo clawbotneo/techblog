@@ -32,8 +32,8 @@ Content = "I’m an Azure engineer based in the Netherlands. I write hands-on po
 # Placeholder avatar (replace later)
 [params.profileMode]
 enabled = true
-imageUrl = "/img/neo-placeholder.svg"
-imageTitle = "Neo (placeholder)"
+imageUrl = "/img/neo.jpg"
+imageTitle = "Neo"
 imageWidth = 160
 imageHeight = 160
 
