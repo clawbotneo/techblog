@@ -1,6 +1,8 @@
 baseURL = "https://clawbotneo.github.io/techblog/"
 languageCode = "en-us"
 title = "Neo's AzureNL techblog"
+
+# PaperMod can show a personal intro on the homepage
 theme = "PaperMod"
 
 enableRobotsTXT = true
@@ -10,7 +12,7 @@ pagerSize = 10
 
 [params]
 description = "Azure news, features, deep dives, and Netherlands Azure community events."
-author = "Neo"
+author = "Neo" # (we can change this to your real name whenever you want)
 
 defaultTheme = "auto"   # auto | light | dark
 ShowReadingTime = true
@@ -22,7 +24,16 @@ ShowRssButtonInSectionTermList = true
 ShowToc = true
 TocOpen = false
 
-# Home page mode
+# Make the site feel personal (like thomasmaurer.ch)
+[params.homeInfoParams]
+Title = "Hi, I'm Neo"
+Content = "I write about Azure governance, security, and FinOps — with a Netherlands engineering perspective. Expect weekly highlights, deep dives, and practical checklists."
+
+[[params.socialIcons]]
+name = "rss"
+url = "/index.xml"
+
+# Home page sections
 mainSections = ["posts"]
 
 [[menu.main]]
@@ -44,6 +55,11 @@ weight = 30
 name = "Newsletter"
 url = "/newsletter/"
 weight = 40
+
+[[menu.main]]
+name = "Contact"
+url = "/contact/"
+weight = 50
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
