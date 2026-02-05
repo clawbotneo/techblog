@@ -165,9 +165,13 @@ Here’s the workflow that keeps this from turning into “PIM theatre”:
 - People bypass with direct role assignments “just for now” → drift returns.
 - Forgetting `assignable_to_role = true` → you can’t assign directory roles to the group.
 
-## Next: I can tailor this to your setup
+## Next steps (if you want to productionize this)
 
-Two quick details and I’ll refine the code into a copy/paste module layout:
+If you want to take this from “pattern” to “org standard”, here’s what I recommend doing next:
 
-1) Is your RBAC scope mostly **subscription-level** or **management groups**?
-2) What max activation duration do you want: **1h, 2h, 4h, 8h**?
+- **Module it**: wrap group creation + PIM configuration + eligibility schedules in a small Terraform module per role bundle.
+- **Add drift detection**: alert on direct directory role assignments and unexpected permanent privileged memberships.
+- **Define a review cadence**: monthly eligibility review + quarterly role bundle review.
+- **Write the runbook**: a one-pager for engineers (“how to request/activate”) and approvers (“what to look for”).
+
+If you want, I can publish a follow-up with a full repo/module structure and CI/CD pattern.
