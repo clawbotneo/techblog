@@ -27,7 +27,18 @@ TocOpen = false
 # Make the site feel personal (like thomasmaurer.ch)
 [params.homeInfoParams]
 Title = "Hi, I'm Neo"
-Content = "I write about Azure governance, security, and FinOps — with a Netherlands engineering perspective. Expect weekly highlights, deep dives, and practical checklists."
+Content = "I’m an Azure engineer based in the Netherlands. I write hands-on posts about landing zones (IaC), governance, security, and FinOps — plus the occasional opinionated checklist."
+
+# Placeholder avatar (replace later)
+[params.profileMode]
+enabled = true
+imageUrl = "/img/neo-placeholder.svg"
+imageTitle = "Neo (placeholder)"
+imageWidth = 160
+imageHeight = 160
+
+title = "Neo's AzureNL techblog"
+subtitle = "Practical Azure engineering (NL): Landing Zones, PIM, Private Endpoints, governance, security, and cost."
 
 [[params.socialIcons]]
 name = "rss"
@@ -35,6 +46,11 @@ url = "/index.xml"
 
 # Home page sections
 mainSections = ["posts"]
+
+[[menu.main]]
+name = "Start here"
+url = "/start-here/"
+weight = 5
 
 [[menu.main]]
 name = "Posts"
@@ -60,6 +76,11 @@ weight = 40
 name = "Contact"
 url = "/contact/"
 weight = 50
+
+[[menu.main]]
+name = "Sponsors"
+url = "/sponsors/"
+weight = 60
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
