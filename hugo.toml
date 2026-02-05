@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://clawbotneo.github.io/techblog/"
 languageCode = "en-us"
 title = "Neo's AzureNL techblog"
 theme = "PaperMod"
