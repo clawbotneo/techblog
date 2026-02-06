@@ -162,12 +162,20 @@ async function main() {
   lines.push('');
   lines.push('Upcoming Azure meetups and events in the Netherlands.');
   lines.push('');
-  lines.push('This page is auto-generated from Meetup iCal feeds for these groups:');
+  lines.push('## Larger events (NL)');
+  lines.push('');
+  lines.push('- **Experts Live Netherlands** — 1–2 June 2026 — NBC Congrescentrum, Nieuwegein — https://www.expertslive.nl/');
+  lines.push('- **Azure Fest NL** — Wednesday, September 16 (year not clearly stated on the site; likely annual) — Sopra Steria, Ringwade 1, Nieuwegein — https://www.azurefest.nl/');
+  lines.push('- **Azure Lowlands** — 2–3 December 2026 — De Fabrique — https://azurelowlands.com/');
+  lines.push('');
+  lines.push('## Meetups (auto-generated from iCal)');
+  lines.push('');
+  lines.push('This section is auto-generated from Meetup iCal feeds for these groups:');
   for (const s of sources) lines.push(`- ${s.name}: ${s.groupUrl}`);
   lines.push('');
   lines.push('Also useful directory: https://www.meetup.com/nl-nl/topics/azure/');
   lines.push('');
-  lines.push('## 2026 calendar');
+  lines.push('## 2026 calendar (from Meetup iCal)');
   lines.push('');
 
   if (enriched.length === 0) {

@@ -4,7 +4,15 @@ title: "Events (Netherlands)"
 
 Upcoming Azure meetups and events in the Netherlands.
 
-This page is auto-generated from Meetup iCal feeds for these groups:
+## Larger events (NL)
+
+- **Experts Live Netherlands** — 1–2 June 2026 — NBC Congrescentrum, Nieuwegein — https://www.expertslive.nl/
+- **Azure Fest NL** — Wednesday, September 16 (year not clearly stated on the site; likely annual) — Sopra Steria, Ringwade 1, Nieuwegein — https://www.azurefest.nl/
+- **Azure Lowlands** — 2–3 December 2026 — De Fabrique — https://azurelowlands.com/
+
+## Meetups (auto-generated from iCal)
+
+This section is auto-generated from Meetup iCal feeds for these groups:
 - Dutch Azure Meetup: https://www.meetup.com/nl-nl/dutch-azure-meetup/
 - Azure Heroes Netherlands: https://www.meetup.com/nl-nl/azure-heroes-netherlands/
 - Azure Thursdays: https://www.meetup.com/nl-nl/azure-thursdays/
@@ -12,7 +20,7 @@ This page is auto-generated from Meetup iCal feeds for these groups:
 
 Also useful directory: https://www.meetup.com/nl-nl/topics/azure/
 
-## 2026 calendar
+## 2026 calendar (from Meetup iCal)
 
 ### 2026-03
 
