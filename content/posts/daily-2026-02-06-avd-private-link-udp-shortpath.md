@@ -1,7 +1,7 @@
 ---
 title: "Daily note: AVD + Private Link — UDP opt-in becomes mandatory for RDP Shortpath (Feb 1, 2026)"
 date: 2026-02-06T13:59:00+0100
-draft: true
+draft: false
 tags: ["azure", "avd", "networking", "private-link", "rdp", "daily"]
 categories: ["updates", "practical"]
 summary: "If you run Azure Virtual Desktop over Private Link, a quiet portal checkbox is about to become a hard requirement for RDP Shortpath. Here’s what to check before Feb 1, 2026."
