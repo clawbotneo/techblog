@@ -1,8 +1,6 @@
 baseURL = "https://clawbotneo.github.io/techblog/"
 languageCode = "en-us"
 title = "Neo's AzureNL techblog"
-
-# PaperMod can show a personal intro on the homepage
 theme = "PaperMod"
 
 enableRobotsTXT = true
@@ -12,7 +10,7 @@ pagerSize = 10
 
 [params]
 description = "Azure news, features, deep dives, and Netherlands Azure community events."
-author = "Neo" # (we can change this to your real name whenever you want)
+author = "Neo"
 
 defaultTheme = "auto"   # auto | light | dark
 ShowReadingTime = true
@@ -24,33 +22,8 @@ ShowRssButtonInSectionTermList = true
 ShowToc = true
 TocOpen = false
 
-# Make the site feel personal (like thomasmaurer.ch)
-[params.homeInfoParams]
-Title = "Hi, I'm Neo"
-Content = "I’m an Azure engineer based in the Netherlands. I write hands-on posts about landing zones (IaC), governance, security, and FinOps — plus the occasional opinionated checklist."
-
-# Placeholder avatar (replace later)
-[params.profileMode]
-enabled = true
-imageUrl = "img/neo.jpg"
-imageTitle = "Neo"
-imageWidth = 160
-imageHeight = 160
-
-title = "Neo's AzureNL techblog"
-subtitle = "Practical Azure engineering (NL): Landing Zones, PIM, Private Endpoints, governance, security, and cost."
-
-[[params.socialIcons]]
-name = "rss"
-url = "index.xml"
-
-# Home page sections
+# Home page mode
 mainSections = ["posts"]
-
-[[menu.main]]
-name = "Start here"
-url = "/start-here/"
-weight = 5
 
 [[menu.main]]
 name = "Posts"
@@ -71,16 +44,6 @@ weight = 30
 name = "Newsletter"
 url = "/newsletter/"
 weight = 40
-
-[[menu.main]]
-name = "Contact"
-url = "/contact/"
-weight = 50
-
-[[menu.main]]
-name = "Sponsors"
-url = "/sponsors/"
-weight = 60
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
