@@ -1,10 +1,10 @@
 ---
 title: "From DATEX II v2 to v3: building a resilient NL traffic dashboard on NDW open data"
 date: 2026-02-08T15:00:00+01:00
-draft: false
-tags: ["azure", "ndw", "opendata", "nextjs", "datapipelines", "resilience"]
-categories: ["deep-dive", "updates"]
-summary: "NDW’s DATEX migration broke my parser. Here’s what changed, how I mapped Alert-C locations to road codes, and how to keep a Next.js API responsive under slow upstream feeds."
+draft: true
+tags: ["offline"]
+categories: ["meta"]
+summary: "(Offline) This post was unpublished; it did not fit the Azure-only scope of this blog."
 ---
 
 ## The goal
