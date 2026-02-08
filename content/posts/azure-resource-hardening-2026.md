@@ -1,6 +1,8 @@
 ---
 title: "Azure resource hardening in 2026: a practical checklist (RBAC, network, logging, policy)"
-date: 2026-02-08T15:45:00+01:00
+slug: "azure-resource-hardening-2026"
+# Use a past UTC timestamp to avoid Hugo "future post" filtering in CI/CD.
+date: 2026-02-08T14:55:00Z
 draft: false
 tags: ["azure", "security", "hardening", "networking", "governance", "defender"]
 categories: ["security", "architecture"]
