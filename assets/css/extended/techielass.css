@@ -1,0 +1,114 @@
+/* Techielass-inspired (Ghost/Casper-like) skin for PaperMod
+   Goal: lots of whitespace, clean typography, light theme.
+*/
+
+:root {
+  /* layout */
+  --main-width: 1200px;
+  --nav-width: 1200px;
+  --radius: 0px;
+
+  /* colors (Casper-ish) */
+  --theme: #ffffff;
+  --entry: transparent;
+  --primary: #15171a;
+  --secondary: #738a94;
+  --tertiary: #f7f7f7;
+  --content: #15171a;
+  --hljs-bg: #15171a;
+  --code-bg: #f4f8fb;
+  --border: #e1e1e1;
+}
+
+/* Force light mode look regardless of OS preference */
+body {
+  background: var(--theme);
+  color: var(--content);
+}
+
+/* Header spacing similar to Casper */
+.header {
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  padding: 20px 0;
+}
+
+.logo a {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Home list: make entries feel like Casper cards (image + title + excerpt) */
+.main {
+  padding-top: 28px;
+}
+
+.post-entry {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 42px;
+}
+
+.entry-cover {
+  margin-bottom: 18px;
+}
+
+.entry-cover img {
+  border-radius: 0;
+}
+
+.entry-header h2 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.entry-content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--secondary);
+  -webkit-line-clamp: 3;
+}
+
+.entry-footer {
+  font-size: 13px;
+  color: #979797;
+}
+
+/* Make the first entry look more like a hero */
+.first-entry {
+  min-height: 240px;
+  padding: 0;
+  border: none;
+}
+
+.first-entry .entry-header h1 {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+/* Single post typography closer to Casper */
+.post-content {
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.post-title {
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+.post-content a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Reduce dark footer look */
+.footer {
+  border-top: 1px solid var(--border);
+}

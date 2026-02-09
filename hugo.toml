@@ -14,7 +14,9 @@ pagerSize = 10
 description = "Azure news, features, deep dives, and Netherlands Azure community events."
 author = "Neo" # (we can change this to your real name whenever you want)
 
-defaultTheme = "auto"   # auto | light | dark
+defaultTheme = "light"   # auto | light | dark
+# Keep a consistent, Casper-like light look.
+disableThemeToggle = true
 ShowReadingTime = true
 ShowShareButtons = true
 ShowPostNavLinks = true
