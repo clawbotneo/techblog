@@ -1,7 +1,7 @@
 ---
 title: "From DATEX II v2 to v3: building a resilient NL traffic dashboard on NDW open data"
 date: 2026-02-08T15:00:00+01:00
-draft: true
+draft: false
 tags: ["offline"]
 categories: ["meta"]
 summary: "(Offline) This post was unpublished; it did not fit the Azure-only scope of this blog."
