@@ -1,4 +1,4 @@
-/* Techielass-inspired (Ghost/Casper-like) skin for PaperMod
+/* Ghost/Casper-like skin for PaperMod
    Goal: lots of whitespace, clean typography, light theme.
 */
 
@@ -26,30 +26,90 @@ body {
   color: var(--content);
 }
 
-/* Header spacing similar to Casper */
+/* Header (Casper-like: simple, white, lots of space) */
 .header {
   border-bottom: 1px solid var(--border);
+  background: #fff;
 }
 
 .nav {
-  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 22px 0;
 }
 
 .logo a {
   font-weight: 800;
   letter-spacing: -0.02em;
+  font-size: 22px;
 }
 
-/* Home list: make entries feel like Casper cards (image + title + excerpt) */
+#menu,
+.menu {
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+#menu a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  opacity: 0.9;
+}
+
+#menu .active {
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 2px;
+}
+
+/* Home grid (Casper-like) */
 .main {
   padding-top: 28px;
 }
 
+.post-feed {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  padding-top: 8px;
+}
+
+@media (max-width: 991px) {
+  .post-feed {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .post-feed {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* PaperMod entries become lightweight "cards" */
 .post-entry {
   border: none;
   background: transparent;
   padding: 0;
-  margin-bottom: 42px;
+  margin: 0;
+}
+
+/* First entry spans full width as a hero */
+.first-entry {
+  grid-column: 1 / -1;
+  min-height: 240px;
+  padding: 0;
+  border: none;
 }
 
 .entry-cover {
@@ -67,6 +127,12 @@ body {
   letter-spacing: -0.01em;
 }
 
+.first-entry .entry-header h1 {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
 .entry-content {
   font-size: 16px;
   line-height: 1.6;
@@ -77,19 +143,6 @@ body {
 .entry-footer {
   font-size: 13px;
   color: #979797;
-}
-
-/* Make the first entry look more like a hero */
-.first-entry {
-  min-height: 240px;
-  padding: 0;
-  border: none;
-}
-
-.first-entry .entry-header h1 {
-  font-size: 56px;
-  font-weight: 800;
-  letter-spacing: -0.015em;
 }
 
 /* Single post typography closer to Casper */

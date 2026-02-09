@@ -1,0 +1,25 @@
+<header class="header">
+  <nav class="nav">
+    <div class="logo">
+      {{- $label_text := (site.Params.label.text | default site.Title) -}}
+      <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
+        {{- $label_text -}}
+      </a>
+    </div>
+
+    <ul id="menu" class="menu">
+      {{- $currentPage := . -}}
+      {{- range site.Menus.main -}}
+        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL -}}
+        {{- $page_url := $currentPage.Permalink | absLangURL -}}
+        <li>
+          <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
+            <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+              {{- .Name -}}
+            </span>
+          </a>
+        </li>
+      {{- end -}}
+    </ul>
+  </nav>
+</header>
