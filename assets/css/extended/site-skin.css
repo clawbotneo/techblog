@@ -26,10 +26,27 @@ body {
   color: var(--content);
 }
 
-/* Header (Casper-like: simple, white, lots of space) */
+/* Header (Azure-ish dark nav)
+   Background: very dark blue/grey with subtle Azure accent.
+*/
 .header {
-  border-bottom: 1px solid var(--border);
-  background: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0b1f3a; /* deep Azure-ish navy */
+}
+
+.header .logo a,
+.header #menu a {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.header #menu a:hover,
+.header .logo a:hover {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.header #menu .active {
+  border-bottom: 2px solid #0078d4; /* Microsoft Azure blue */
 }
 
 .nav {
