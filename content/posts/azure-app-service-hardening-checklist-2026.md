@@ -119,7 +119,5 @@ If you do nothing else, do these:
 5. Add alerts for **5xx** and **latency**
 6. Ensure your backing data stores have real backups
 
-## Closing thought
-App Service is a great PaaS, but the defaults are not a security posture. The win is making the “secure path” the easy path: MI, Key Vault, WAF, logging, and safe deployments.
-
-If you tell me your exact setup (Front Door vs none, public vs private, which data stores), I can tailor this into a 10-item checklist specific to your environment.
+## Final
+App Service is a great PaaS, but the defaults are not a security posture. The win is making the “secure path” the easy path: Managed Identity, Key Vault, a WAF at the edge, logging you actually look at, and deployments that fail safely.

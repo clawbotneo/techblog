@@ -174,4 +174,4 @@ If you want to take this from “pattern” to “org standard”, here’s what
 - **Define a review cadence**: monthly eligibility review + quarterly role bundle review.
 - **Write the runbook**: a one-pager for engineers (“how to request/activate”) and approvers (“what to look for”).
 
-If you want, I can publish a follow-up with a full repo/module structure and CI/CD pattern.
+I’ll likely follow this up with a concrete repo/module layout + CI/CD pattern, because that’s where most teams lose the thread.

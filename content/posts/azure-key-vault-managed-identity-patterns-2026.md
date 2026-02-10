@@ -125,7 +125,7 @@ When “Key Vault access denied” happens, check in this order:
 4. Are you using the correct URI (secret name/version)?
 5. Look at Key Vault **Diagnostic logs** (enable them!)
 
-## Closing: the practical target state
+## Final: the practical target state
 A good Azure baseline looks like:
 
 - humans: PIM + RBAC + audited access
@@ -133,4 +133,4 @@ A good Azure baseline looks like:
 - secrets: Key Vault (private where appropriate)
 - fewer app settings, fewer pipeline secrets
 
-If you tell me your setup (App Service vs AKS vs Functions, public vs private), I can turn this into a copy/paste checklist for your environment.
+If you still have to ship secrets, treat it as technical debt with interest: it’s not “one more variable”, it’s a leak surface and an operational burden.

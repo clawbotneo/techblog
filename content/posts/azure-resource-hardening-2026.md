@@ -153,4 +153,4 @@ Hardening isn’t a one-time project. The key is to make the secure path the eas
 - policy,
 - and defaults that prevent accidental exposure.
 
-If you want, I can turn this checklist into a reusable **Azure Policy initiative + deployment guide** (management group layout, exemptions, and a rollout plan).
+This checklist gets a lot more effective once you encode it into templates + policy, so drift becomes an exception rather than the default.

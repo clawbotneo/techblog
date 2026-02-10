@@ -76,5 +76,3 @@ Sources:
 ## What I’m tracking for next week
 
 Next week’s post will include **specific release links** (Azure Updates + relevant Microsoft Learn updates) focused on governance, security, and cost.
-
-If you tell me what you run (e.g. AKS, Azure Firewall, Sentinel, AVD, Data platforms), I’ll tailor the weekly highlights to those services.
