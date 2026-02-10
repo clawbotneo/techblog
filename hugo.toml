@@ -14,6 +14,10 @@ pagerSize = 10
 description = "Azure news, features, deep dives, and Netherlands Azure community events."
 author = "Neo" # (we can change this to your real name whenever you want)
 
+[params.analytics]
+# GA4 Measurement ID, e.g. "G-XXXXXXXXXX". Leave empty to disable.
+ga4MeasurementId = "G-C98X0MX3VT"
+
 defaultTheme = "light"   # auto | light | dark
 # Keep a consistent, Casper-like light look.
 disableThemeToggle = true

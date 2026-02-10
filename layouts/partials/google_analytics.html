@@ -1,4 +1,20 @@
 {{/*
-  PaperMod expects this partial in some versions.
-  We keep it empty for now because analytics isn't configured.
+  GA4 (gtag.js)
+  - Configure in hugo.toml:
+      [params.analytics]
+      ga4MeasurementId = "G-XXXXXXXXXX"
+  - Only loads in production.
 */}}
+
+{{- if hugo.IsProduction | or (eq site.Params.env "production") -}}
+  {{- with site.Params.analytics.ga4MeasurementId -}}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} // eslint-disable-line
+      gtag('js', new Date());
+      gtag('config', '{{ . }}', { anonymize_ip: true });
+    </script>
+  {{- end -}}
+{{- end -}}
+
