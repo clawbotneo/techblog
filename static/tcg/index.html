@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neo TCG Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Neo TCG (Prototype)</h1>
+      <div class="hud">
+        <div class="hud-block">
+          <div><strong>Enemy HP:</strong> <span id="enemyHp"></span></div>
+          <div><strong>Enemy Mana:</strong> <span id="enemyMana"></span></div>
+        </div>
+        <div class="hud-block">
+          <div><strong>Your HP:</strong> <span id="playerHp"></span></div>
+          <div><strong>Your Mana:</strong> <span id="playerMana"></span></div>
+        </div>
+        <div class="hud-block">
+          <div><strong>Turn:</strong> <span id="turn"></span></div>
+          <div><strong>Phase:</strong> <span id="phase"></span></div>
+          <button id="endTurnBtn">End turn</button>
+          <button id="restartBtn" class="secondary">Restart</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="board">
+      <section class="lane">
+        <h2>Enemy board</h2>
+        <div id="enemyBoard" class="board-row"></div>
+      </section>
+
+      <section class="lane heroes">
+        <div class="hero enemy" id="enemyHero">
+          <div class="hero-title">Enemy</div>
+          <div class="hero-hp" id="enemyHeroHp"></div>
+        </div>
+        <div class="center">
+          <div id="log" class="log"></div>
+          <div class="hint">
+            <strong>How to play</strong>
+            <ul>
+              <li>Play a card from your hand (if you can afford it).</li>
+              <li>Units have <em>summoning sickness</em>: they can't attack the turn they're played.</li>
+              <li>To attack: click one of your ready units, then click an enemy unit or the enemy hero.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero player" id="playerHero">
+          <div class="hero-title">You</div>
+          <div class="hero-hp" id="playerHeroHp"></div>
+        </div>
+      </section>
+
+      <section class="lane">
+        <h2>Your board</h2>
+        <div id="playerBoard" class="board-row"></div>
+      </section>
+
+      <section class="lane">
+        <h2>Your hand</h2>
+        <div id="hand" class="hand"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="small">Prototype rules: 3 colors of mana (R/G/B), auto-mana per turn, units only (for now).</div>
+    </footer>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
