@@ -1,0 +1,13 @@
+---
+title: "Daily Tech Note — 2026-02-22"
+date: 2026-02-22
+draft: false
+tags: ["daily", "ops"]
+categories: ["Daily"]
+summary: "Automated daily post (reliability backstop)."
+---
+
+This is today’s automated daily post.
+
+- Purpose: keep the publishing pipeline healthy.
+- If you’re reading this: the scheduled 08:00 job likely didn’t run (VM eviction or a missed trigger), so the backstop published it.
